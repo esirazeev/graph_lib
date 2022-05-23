@@ -8,7 +8,7 @@ set(CMAKE_CXX_FLAGS "-std=c++20 -Wall")
 include_directories(.)
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
-add_executable(gtest.out tests/unit_test_graph.cpp gtest.out)
+add_executable(gtest.out tests/unit_test_graph.cpp gtest.out tests/unit_test_graph_algorithms.cpp)
 target_link_libraries(gtest.out ${GTEST_LIBRARIES} ${GTEST_MAIN_LIBRARIES} pthread)
 
 #run gtest after build
